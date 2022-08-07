@@ -23,6 +23,17 @@ export class ResultsComponent implements OnInit, OnDestroy {
   rarechartSub: Subscription
   rarechart
 
+  polytypeSub: Subscription
+  polytype
+
+  creatureSub: Subscription
+  creature
+
+  elementSub: Subscription
+  element
+
+  itemSub: Subscription
+  item
 
   constructor(private gService: GeneratorService) {}
 
@@ -35,6 +46,10 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.comchartSub = this.gService.comchart.subscribe((comchart) => {this.comchart = comchart})
     this.uncomchartSub = this.gService.uncomchart.subscribe((uncomchart) => {this.uncomchart = uncomchart})
     this.rarechartSub = this.gService.rarechart.subscribe((rarechart) => {this.rarechart = rarechart})
+    this.polytypeSub = this.gService.polytype.subscribe((polytype) => {this.polytype = polytype})
+    this.creatureSub = this.gService.creature.subscribe((creature) => {this.creature = creature})
+    this.elementSub = this.gService.element.subscribe((element) => {this.element = element})
+    this.itemSub = this.gService.item.subscribe((item) => {this.item = item})
   }
 
 
@@ -45,6 +60,10 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.comchartSub.unsubscribe()
     this.uncomchartSub.unsubscribe()
     this.rarechartSub.unsubscribe()
+    this.polytypeSub.unsubscribe()
+    this.creatureSub.unsubscribe()
+    this.elementSub.unsubscribe()
+    this.itemSub.unsubscribe()
   }
 
 }

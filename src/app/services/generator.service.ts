@@ -8,15 +8,15 @@ import { Subject } from "rxjs";
 export class GeneratorService {
 
   treasures: string[]= [
-    'Nothing', 'Nothing', 'Nothing', 'Nothing',
-    'Nothing', 'Nothing', 'Nothing', 'Nothing',
-    'Coins', 'Coins', 'Coins', 'Coins', 'Coins', 'Coins', 'Coins', 'Coins',
-    'Coins', 'Coins', 'Coins', 'Coins', 'Coins', 'Coins', 'Coins', 'Coins',
+    'Nothing', 'Nothing', 'Nothing', 'Nothing', 'Nothing',
+    'Nothing', 'Nothing', 'Nothing', 'Nothing', 'Nothing',
+    'Coins 1', 'Coins 2', 'Coins 3', 'Coins 4', 'Coins 5', 'Coins 6', 'Coins 7', 'Coins 8', 'Coins 9', 'Coins 10',
+    'Coins 11', 'Coins 12', 'Coins 13', 'Coins 14', 'Coins 15', 'Coins 16', 'Coins 17', 'Coins 18', 'Coins 19', 'Coins 20',
     'Lotus Powder',
     'Space Alien Tech', 'Space Alien Tech',
     'Magic Item', 'Magic Item',
     'Weird Alien Tech',
-    'Spellbook'  ]
+    'Spellbook']
     treasure = new Subject
 
   grwcharts: string[]= [
@@ -58,7 +58,7 @@ export class GeneratorService {
       'Antimagic Field centered on the rod wielder.',
       "Brilliant light from above illuminates random creature (DM’s choice) granting a +3 circumstance bonus on all ranged attacks against that creature.",
       "Baleful Polymorph (DC 25) affects a creature of the rod wielder's choosing.",
-      'Summon Spawn',
+      'Summon Spawn 1D10 HD',
       'Delayed blast fireball, at target or 100 ft. straight ahead, causes 15d6 points of fire damage (DC 25).',
       'Forcecage affects an area selected by the rod wielder.',
       'Nearest pool of standing water becomes stagnant and undrinkable.',
@@ -80,7 +80,7 @@ export class GeneratorService {
       'Rod fires an energy beam (see Space Alien Weapons).'    ]
       uncomchart = new Subject
 
-    rarecharts :string[]= [
+    rarecharts: string[]= [
       "Gate to Kord's Realm in Ysgard.",
       "Gate to Shra'kt'lor in Limbo.",
       "Gate to the City of Slaughter in Pandemonium.",
@@ -101,12 +101,47 @@ export class GeneratorService {
       "Day becomes night or night becomes day; the day/night pattern of the planet or plane is permanently offset by half a day.",
       "Power Word Kill against a creature of the wielder's choice.",
       "The most recent adversary the wielder killed that has an equal or greater number of Hit Dice is returned to life at exact location where it was slain, and it immediately becomes obsessed with evening the score.",
-      "Summon Spawn",
+      "Summon Spawn 2D6 HD",
       "Wielder Shapechanges into a creature of the character's choice.",
       "Iron Body affects the wielder for 20 minutes.",
-      "Wish (no XP or gold cost)."    ]
+      "Wish (no XP or gold cost)."]
       rarechart = new Subject
 
+    polytypes: string[]= [
+      'Creature', 'Element', 'Item' ]
+      polytype = new Subject
+
+    creatures: string[]= [
+      'Human', 'Mutant', 'Cyborg', 'Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Halfling', 'Orc', 'Tiefling', 'Thri-Kreen', 'Half-Giant',
+      'Animal', 'Amphibious Ones', "B'yakhee", 'Colour Out of Space', "Cthugah's Flame Creature", 'Deep One', 'Dimensional Shambler', 'Dinosaur', 'Diseased Guardian', 'Dolm Ooze',
+      'Dolm Pudding', 'Dolm Worm', 'Flying Polyp', 'Giant Jungle Ant', 'Great Race', 'Jale Slime', 'Lake Monster', 'Mi-Go', 'Mummy', 'Mummy Brain',
+      'Primordial One', 'Servitor of the Outer Gods', 'Shoggoth', 'Space Alien', 'Species 23750', 'Ulfire Jelly', 'Ulfire Mold', 'Unquiet Worm', 'Spawn of Yog-Sothoth', 'Spawn of Shub-Niggurath',
+      'Anhkheg', 'Axe Beak', 'Baluchiterium', 'Basilisk', 'Beholder', 'Bulette', 'Carrion Crawler', 'Catoblepas', 'Chimera', 'Cockatrice',
+      'Displacer Beast', 'Ettin', 'Gas Spore', 'Gelatinous Cube', 'Gorgon', 'Harpy', 'Hell Hound', 'Hydra', 'Intellect Devourer', 'Lamia',
+      'Larva', 'Manticore', 'Mind Flayer', 'Neo-Otyugh', 'Ogre', 'Otyugh', 'Owlbear', 'Peryton', 'Remorhaz', 'Rust Monster',
+      'Salamander', 'Shambling Mound', 'Giant Slug', 'Stirge', 'Su-Monster', 'Thought Eater', 'Troglodyte', 'Troll', 'Umber Hulk', 'Xorn',
+      'Azathoth', 'Colorless Ooze', 'Crawling God', 'Cthugah', 'Cthulhu', 'Deep Gibbering Madness', 'Desiccating Slime of the Silent Halls', 'Fetor of the Depths', 'Foul Putrescence', 'God of the Primal Void',
+      'Green Ooze Pool', 'Hastur the Unspeakable', 'Inky Crawler', "I'Thaqua", 'It of the Fallen Pylons', 'Leprous Dweller Below', 'Lurker Amidst the Obsidian Ruins', 'Lurker of the Putrescent Pits', 'Nyarlathotep', 'Putrescent Stench',
+      'Shambler of the Endless Night', 'Shub-Niggurath', 'Slime God', 'Squamous Worm of the Pit', 'Suckered Abomination', 'Tentacled One', 'Violet Mist', 'Water Death', 'Weird God', 'Yog-Sothoth'
+    ]
+      creature = new Subject
+
+    elements: string[]= [
+      'Hydrogen', 'Helium', 'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Nitrogen', 'Oxygen', 'Fluorine', 'Neon',
+      'Sodium', 'Magnesium', 'Aluminum', 'Silicon', 'Phosphorus', 'Sulfur', 'Chlorine', 'Argon', 'Potassium', 'Calcium',
+      'Scandium', 'Titanium', 'Vanadium', 'Chromium', 'Manganese', 'Iron', 'Cobalt', 'Nickel', 'Copper', 'Zinc',
+      'Gallium', 'Germanium', 'Arsenic', 'Selenium', 'Bromine', 'Krypton', 'Rubidium', 'Strontium', 'Yttrium', 'Zirconium',
+      'Niobium', 'Molybdenum', 'Technetium', 'Ruthenium', 'Rhodium', 'Palladium', 'Silver', 'Cadmium', 'Indium', 'Tin',
+      'Antimony', 'Tellurium', 'Iodine', 'Xenon', 'Cesium', 'Barium', 'Lanthanum', 'Cerium', 'Praseodymium', 'Neodymium',
+      'Promethium', 'Samarium', 'Europium', 'Gadolinium', 'Terbium', 'Dysprosium', 'Holmium', 'Erbium', 'Thulium', 'Ytterbium',
+      'Lutetium', 'Hafnium', 'Tantalum', 'Tungsten', 'Rhenium', 'Osmium', 'Iridium', 'Platinum', 'Gold', 'Mercury',
+      'Thallium', 'Lead', 'Bismuth', 'Polonium', 'Astatine', 'Radon', 'Francium', 'Radium', 'Actinium', 'Thorium',
+      'Protactinium', 'Uranium', 'Neptunium', 'Plutonium']
+      element = new Subject
+
+    items: string[]= [
+      'Junk', 'Armor', 'Shield', 'Weapon', 'Treasure']
+      item = new Subject
 
 
   constructor() {}
@@ -136,4 +171,23 @@ export class GeneratorService {
     this.rarechart.next(randomRarechart)
   }
 
+  getRandomPolytype() {
+    const randomPolytype = this.polytypes[Math.floor(Math.random()*this.polytypes.length)]
+    this.polytype.next(randomPolytype)
+  }
+
+  getRandomCreature() {
+    const randomCreature = this.creatures[Math.floor(Math.random()*this.creatures.length)]
+    this.creature.next(randomCreature)
+  }
+
+  getRandomElement() {
+    const randomElement = this.elements[Math.floor(Math.random()*this.elements.length)]
+    this.element.next(randomElement)
+  }
+
+  getRandomItem() {
+    const randomItem = this.items[Math.floor(Math.random()*this.items.length)]
+    this.item.next(randomItem)
+  }
 }

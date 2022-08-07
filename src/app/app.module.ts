@@ -11,6 +11,7 @@ import { WildSurgesComponent } from './wild-surges/wild-surges.component';
 import { ResultsComponent } from './results/results.component';
 import { CarousingComponent } from './carousing/carousing.component';
 import { GrwComponent } from './grw/grw.component';
+import { PolymorphComponent } from './polymorph/polymorph.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GrwComponent } from './grw/grw.component';
     WildSurgesComponent,
     ResultsComponent,
     CarousingComponent,
-    GrwComponent
+    GrwComponent,
+    PolymorphComponent
   ],
   imports: [
     BrowserModule,
