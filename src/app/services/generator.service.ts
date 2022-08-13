@@ -120,9 +120,10 @@ export class GeneratorService {
       'Displacer Beast', 'Ettin', 'Gas Spore', 'Gelatinous Cube', 'Gorgon', 'Harpy', 'Hell Hound', 'Hydra', 'Intellect Devourer', 'Lamia',
       'Larva', 'Manticore', 'Mind Flayer', 'Neo-Otyugh', 'Ogre', 'Otyugh', 'Owlbear', 'Peryton', 'Remorhaz', 'Rust Monster',
       'Salamander', 'Shambling Mound', 'Giant Slug', 'Stirge', 'Su-Monster', 'Thought Eater', 'Troglodyte', 'Troll', 'Umber Hulk', 'Xorn',
-      'Azathoth', 'Colorless Ooze', 'Crawling God', 'Cthugah', 'Cthulhu', 'Deep Gibbering Madness', 'Desiccating Slime of the Silent Halls', 'Fetor of the Depths', 'Foul Putrescence', 'God of the Primal Void',
-      'Green Ooze Pool', 'Hastur the Unspeakable', 'Inky Crawler', "I'Thaqua", 'It of the Fallen Pylons', 'Leprous Dweller Below', 'Lurker Amidst the Obsidian Ruins', 'Lurker of the Putrescent Pits', 'Nyarlathotep', 'Putrescent Stench',
-      'Shambler of the Endless Night', 'Shub-Niggurath', 'Slime God', 'Squamous Worm of the Pit', 'Suckered Abomination', 'Tentacled One', 'Violet Mist', 'Water Death', 'Weird God', 'Yog-Sothoth'
+      'Old One'
+    //'Azathoth', 'Colorless Ooze', 'Crawling God', 'Cthugah', 'Cthulhu', 'Deep Gibbering Madness', 'Desiccating Slime of the Silent Halls', 'Fetor of the Depths', 'Foul Putrescence', 'God of the Primal Void',
+    //'Green Ooze Pool', 'Hastur the Unspeakable', 'Inky Crawler', "I'Thaqua", 'It of the Fallen Pylons', 'Leprous Dweller Below', 'Lurker Amidst the Obsidian Ruins', 'Lurker of the Putrescent Pits', 'Nyarlathotep', 'Putrescent Stench',
+    //'Shambler of the Endless Night', 'Shub-Niggurath', 'Slime God', 'Squamous Worm of the Pit', 'Suckered Abomination', 'Tentacled One', 'Violet Mist', 'Watery Death', 'Weird God', 'Yog-Sothoth'
     ]
       creature = new Subject
 
