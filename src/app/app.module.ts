@@ -12,6 +12,7 @@ import { ResultsComponent } from './results/results.component';
 import { CarousingComponent } from './carousing/carousing.component';
 import { GrwComponent } from './grw/grw.component';
 import { PolymorphComponent } from './polymorph/polymorph.component';
+import { PrismaticComponent } from './prismatic/prismatic.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PolymorphComponent } from './polymorph/polymorph.component';
     ResultsComponent,
     CarousingComponent,
     GrwComponent,
-    PolymorphComponent
+    PolymorphComponent,
+    PrismaticComponent
   ],
   imports: [
     BrowserModule,

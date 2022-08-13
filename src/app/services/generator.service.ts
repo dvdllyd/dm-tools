@@ -144,6 +144,22 @@ export class GeneratorService {
       'Junk', 'Armor', 'Shield', 'Weapon', 'Treasure']
       item = new Subject
 
+    prismatics: string[]= [
+      'Red, fire damage, save for half',
+      'Orange, acid damage, save for half',
+      'Yellow, lightning damage, save for half',
+      'Green, save vs poison or die, half damage on save',
+      'Blue, save or turn to stone',
+      'Purple, save or go insane',
+      'Dolm, save or mutate',
+      'Jale, save or wildsurge',
+      'Ulfire, save or polymorph',
+      'Brown, save or cursed',
+      'Black, radiation damage, save for half',
+      'White, cold damage, save for half',
+      'Clear, x-ray damage, save for half',
+      'Roll again twice']
+      prismatic = new Subject
 
   constructor() {}
 
@@ -191,4 +207,10 @@ export class GeneratorService {
     const randomItem = this.items[Math.floor(Math.random()*this.items.length)]
     this.item.next(randomItem)
   }
+
+  getRandomPrismatic() {
+    const randomPrismatic = this.prismatics[Math.floor(Math.random()*this.prismatics.length)]
+    this.prismatic.next(randomPrismatic)
+  }
+
 }
