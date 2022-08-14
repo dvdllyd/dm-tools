@@ -38,6 +38,9 @@ export class ResultsComponent implements OnInit, OnDestroy {
   prismaticSub: Subscription
   prismatic
 
+  satechSub: Subscription
+  satech
+
 
   constructor(private gService: GeneratorService) {}
 
@@ -55,6 +58,7 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.elementSub = this.gService.element.subscribe((element) => {this.element = element})
     this.itemSub = this.gService.item.subscribe((item) => {this.item = item})
     this.prismaticSub = this.gService.prismatic.subscribe((prismatic) => {this.prismatic = prismatic})
+    this.satechSub = this.gService.satech.subscribe((satech) => {this.satech = satech})
   }
 
 
@@ -70,6 +74,7 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.elementSub.unsubscribe()
     this.itemSub.unsubscribe()
     this.prismaticSub.unsubscribe()
+    this.satechSub.unsubscribe()
   }
 
 }

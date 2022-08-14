@@ -161,6 +161,11 @@ export class GeneratorService {
       'Roll again twice']
       prismatic = new Subject
 
+    satechs: string[]= [
+      'Projectile Weapon', 'Melee Weapon', 'Power Cell', 'Grenades', 'Grenade Launcher', 'Bomb', 'Mini Missiles', 'Missle', 'Telescopic Sight', 'Night Vision Sight', 'Reflective Armor',
+      'Battle Armor', 'Space Suit', 'Force Field', 'Absorption Field', 'Communicators', 'Healing Doses', 'Night Vision Goggles', 'Robots', 'Cybernetics', 'Roll Twice']
+      satech = new Subject
+
   constructor() {}
 
   getRandomTreasure() {
@@ -212,5 +217,11 @@ export class GeneratorService {
     const randomPrismatic = this.prismatics[Math.floor(Math.random()*this.prismatics.length)]
     this.prismatic.next(randomPrismatic)
   }
+
+  getRandomSatech() {
+    const randomSatech = this.satechs[Math.floor(Math.random()*this.satechs.length)]
+    this.satech.next(randomSatech)
+  }
+
 
 }

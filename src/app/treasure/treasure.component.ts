@@ -19,4 +19,9 @@ export class TreasureComponent implements OnInit {
     this.genService.getRandomTreasure()
   }
 
+  getSatech() {
+    this.genService.getRandomSatech()
+  }
+
+
 }
