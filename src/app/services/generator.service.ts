@@ -107,6 +107,12 @@ export class GeneratorService {
       "Wish (no XP or gold cost)."]
       rarechart = new Subject
 
+      gates: string[]= [
+        'Banish and Close', 'Banish', 'Banish', 'Banish', 'Banish', 'Banish', 'Banish', 'Banish', 'Banish', 'Banish',
+        'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral', 'Neutral',
+        'Summon x2', 'Summon', 'Summon', 'Summon', 'Summon', 'Summon', 'Summon', 'Summon', 'Summon', 'Summon',  ]
+        gate = new Subject
+
     polytypes: string[]= [
       'Creature', 'Element', 'Item' ]
       polytype = new Subject
@@ -145,19 +151,19 @@ export class GeneratorService {
       item = new Subject
 
     prismatics: string[]= [
-      'Red, fire damage, save for half',
-      'Orange, acid damage, save for half',
-      'Yellow, lightning damage, save for half',
-      'Green, save vs poison or die, half damage on save',
-      'Blue, save or turn to stone',
-      'Purple, save or go insane',
-      'Dolm, save or mutate',
-      'Jale, save or wildsurge',
-      'Ulfire, save or polymorph',
-      'Brown, save or cursed',
-      'Black, radiation damage, save for half',
-      'White, cold damage, save for half',
-      'Clear, x-ray damage, save for half',
+      'Red: fire damage, save for half',
+      'Orange: acid damage, save for half',
+      'Yellow: lightning damage, save for half',
+      'Green: save vs poison or die, half damage on save',
+      'Blue: save or turn to stone',
+      'Purple: save or go insane',
+      'Dolm: save or mutate',
+      'Jale: save or wildsurge',
+      'Ulfire: save or polymorph',
+      'Brown: save or cursed',
+      'Black: radiation damage, save for half',
+      'White: cold damage, save for half',
+      'Clear: x-ray damage, save for half',
       'Roll again twice']
       prismatic = new Subject
 
@@ -165,6 +171,48 @@ export class GeneratorService {
       'Projectile Weapon', 'Melee Weapon', 'Power Cell', 'Grenades', 'Grenade Launcher', 'Bomb', 'Mini Missiles', 'Missle', 'Telescopic Sight', 'Night Vision Sight', 'Reflective Armor',
       'Battle Armor', 'Space Suit', 'Force Field', 'Absorption Field', 'Communicators', 'Healing Doses', 'Night Vision Goggles', 'Robots', 'Cybernetics', 'Roll Twice']
       satech = new Subject
+
+    carouses: string[]= [
+      'Wake up in room of stinking drunks covered in vomit',
+      'Meeting, possible new friends among the down trodden',
+      'Wedding gets the village singing, dancing and gorging',
+      'Wake up with d4 drunks who followed you home and think you are now buddies',
+      'Meet a shifty man with a big coat offering dodgy goods',
+      'Stinking old man dead in your bed with bottle in hand',
+      'Tavern staff of a venue like you and you get a free drink every visit',
+      'Awake with headache and hideous mutant cooking you breakfast',
+      'Next morning after feast cough up a large live frog',
+      'You meet a cunning street urchin who can procure goods and services',
+
+    ]
+      carouse = new Subject
+
+    curses: string[]= [
+      'Fragile: A natural 1 on an attack automatically shatters your weapon beyond repair.',
+      'Weakness: Your damage is reduced by one die type. A weapon that does 1d10 does 1d8. A spell that does 6d6 does 6d4.',
+      'Speech: Anyone who can understand you suffers 1 point of damage each round you speak.',
+      'Dark Reincarnation: Once you are slain your are immediately reincarnated as an undead creature. D4: 1. Zombie, 2. Ghoul, 3. Ghast, 4. Whight',
+      'Thirst: Water or other liquids provide you no hydration. You must consume magical potions to be hydrated. Failure to consume potions will result in death in 1d4+2 days.',
+      'Indecision: You hesitate in all your actions. You attack once every two rounds and all spell casting times are doubled.',
+      "Crawl: You can't stand or walk, but you can crawl. You are considered prone and your movement is reduced by half.",
+      "Incurable: You don't naturally heal damage and all cure spells have no effect on you.",
+      "Painful: All damage dealt to you is maxed.",
+      "Nearsighted: You see perfectly clear within 10' of you. Beyond that your vision is blurry and you can't perceive anything. Your suffer 50% miss chance on all missile attack rolls.",
+      "Farsighted: Your vision is blurry within 10' of you. All your melee attacks suffer a 50% miss chance. Beyond 10' you see perfectly clear.",
+      "Remorseful: Every time you slay an enemy you feel sorrow for their lost. You can't do anything for 1d4 rounds as you mourn their death.",
+      "Addiction: Your addicted to blueberry pie or whatever. If on any given day you don't indulge in your vice you enter a severe depression and refuse to do anything except find your blueberry pie.",
+      "Beacon: Your draw unwanted attention. All random encounter rolls are doubled.",
+      "Bleeder: Every time you take damage you continue to bleed for one additional round. Repeat the damage your were dealt the following round.",
+      "Coward: Every time you are presented with danger your must make a Magic Save to maintain your composure. Failure mean you move at full speed away from the danger. A new check can be made each round.",
+      "Misfortune: All saving throws are made with a 2d8 (not open ended) rather then a d20.",
+      "Youthful: Each day your age is reduced by 1d6 years. If you pass the infant stage you cease to exist.",
+      "Growing Old: You age 1d6 years each day. You gain all the negative physical modifiers but none of the beneficial mental ones associated with age.",
+      "Poor Comprehension: Every time you read or are spoken to you must make an intelligence attribute check to comprehend the meaning.",
+      "Doomed: Will automatically save the next save vs death.",
+      "Cursed to die in a fire: Fire does double damage.",
+      "Mute: Cannot cast spells.",
+      "Hiccups: Always fail stealth checks. Never surprise anyone.", ]
+      curse = new Subject
 
   constructor() {}
 
@@ -176,6 +224,11 @@ export class GeneratorService {
   getRandomGrwchart() {
     const randomGrwchart = this.grwcharts[Math.floor(Math.random()*this.grwcharts.length)]
     this.grwchart.next(randomGrwchart)
+  }
+
+  getRandomGate() {
+    const randomGate = this.gates[Math.floor(Math.random()*this.gates.length)]
+    this.gate.next(randomGate)
   }
 
   getRandomComchart() {
@@ -221,6 +274,16 @@ export class GeneratorService {
   getRandomSatech() {
     const randomSatech = this.satechs[Math.floor(Math.random()*this.satechs.length)]
     this.satech.next(randomSatech)
+  }
+
+  getRandomCarouse() {
+    const randomCarouse = this.carouses[Math.floor(Math.random()*this.carouses.length)]
+    this.carouse.next(randomCarouse)
+  }
+
+  getRandomCurse() {
+    const randomCurse = this.curses[Math.floor(Math.random()*this.curses.length)]
+    this.curse.next(randomCurse)
   }
 
 

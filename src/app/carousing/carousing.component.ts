@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneratorService } from '../services/generator.service';
 
 @Component({
   selector: 'app-carousing',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarousingComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private genService:GeneratorService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  getCarouse() {
+    this.genService.getRandomCarouse
   }
 
 }

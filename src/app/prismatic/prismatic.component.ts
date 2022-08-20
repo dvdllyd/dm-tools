@@ -19,4 +19,9 @@ export class PrismaticComponent implements OnInit {
   getPrismatic() {
     this.genService.getRandomPrismatic()
   }
+
+  getCurse() {
+    this.genService.getRandomCurse()
+  }
+
 }

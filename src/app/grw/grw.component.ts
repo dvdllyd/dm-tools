@@ -30,4 +30,8 @@ export class GrwComponent implements OnInit {
   getRarechart() {
     this.genService.getRandomRarechart()
   }
+
+  getGate() {
+    this.genService.getRandomGate()
+  }
 }

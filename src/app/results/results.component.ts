@@ -14,6 +14,9 @@ export class ResultsComponent implements OnInit, OnDestroy {
   grwchartSub: Subscription
   grwchart
 
+  gateSub: Subscription
+  gate
+
   comchartSub: Subscription
   comchart
 
@@ -41,6 +44,11 @@ export class ResultsComponent implements OnInit, OnDestroy {
   satechSub: Subscription
   satech
 
+  carouseSub: Subscription
+  carouse
+
+  curseSub: Subscription
+  curse
 
   constructor(private gService: GeneratorService) {}
 
@@ -59,6 +67,9 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.itemSub = this.gService.item.subscribe((item) => {this.item = item})
     this.prismaticSub = this.gService.prismatic.subscribe((prismatic) => {this.prismatic = prismatic})
     this.satechSub = this.gService.satech.subscribe((satech) => {this.satech = satech})
+    this.carouseSub = this.gService.carouse.subscribe((carouse) => {this.carouse = carouse})
+    this.curseSub = this.gService.curse.subscribe((curse) => {this.curse =curse})
+    this.gateSub = this.gService.gate.subscribe((gate) =>{this.gate = gate})
   }
 
 
@@ -75,6 +86,9 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.itemSub.unsubscribe()
     this.prismaticSub.unsubscribe()
     this.satechSub.unsubscribe()
+    this.carouseSub.unsubscribe()
+    this.curseSub.unsubscribe()
+    this.gateSub.unsubscribe()
   }
 
 }
