@@ -16,7 +16,6 @@ export class CarousingComponent implements OnInit {
   }
 
   getCarouse() {
-    this.genService.getRandomCarouse
+    this.genService.getRandomCarouse()
   }
-
 }
