@@ -425,6 +425,23 @@ export class GeneratorService {
       "Hiccups: Always fail stealth checks. Never surprise anyone.", ]
       curse = new Subject
 
+      cyborgs:string[]=[
+        'Head', 'Torso',
+        'Right hand', 'Right arm at elbow', 'Right arm',
+        'Left hand', 'Left arm at elbow', 'Left arm',
+        'Right foot', 'Right leg at knee', 'Right leg',
+        'Left foot', 'Left leg at knee', 'Left leg',]
+        cyborg = new Subject
+
+        morphs:string[]=[
+          'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID', 'HUMANOID',
+          'SPHERICAL W/ RETRACTABLE APPENDAGES', 'SPHERICAL W/ RETRACTABLE APPENDAGES',
+          'ARACHNID / INSECTILE', 'ARACHNID / INSECTILE',
+          'MYRIAPOD', 'MYRIAPOD',
+          'SERPENTINE', 'SERPENTINE',
+          'COIL-SHAPED (WALKS END-OVER-END)', 'BIZARRE']
+          morph = new Subject
+
   constructor() {}
 
   getRandomTreasure() {
@@ -497,5 +514,14 @@ export class GeneratorService {
     this.curse.next(randomCurse)
   }
 
+  getRandomCyborg() {
+    const randomCyborg = this.cyborgs[Math.floor(Math.random()*this.cyborgs.length)]
+    this.cyborg.next(randomCyborg)
+  }
+
+  getRandomMorph() {
+    const randomMorph = this.morphs[Math.floor(Math.random()*this.morphs.length)]
+    this.morph.next(randomMorph)
+  }
 
 }

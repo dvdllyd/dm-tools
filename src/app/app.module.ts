@@ -13,6 +13,7 @@ import { CarousingComponent } from './carousing/carousing.component';
 import { GrwComponent } from './grw/grw.component';
 import { PolymorphComponent } from './polymorph/polymorph.component';
 import { PrismaticComponent } from './prismatic/prismatic.component';
+import { RobotsComponent } from './robots/robots.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PrismaticComponent } from './prismatic/prismatic.component';
     CarousingComponent,
     GrwComponent,
     PolymorphComponent,
-    PrismaticComponent
+    PrismaticComponent,
+    RobotsComponent
   ],
   imports: [
     BrowserModule,

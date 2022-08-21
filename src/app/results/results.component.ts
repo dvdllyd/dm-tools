@@ -50,6 +50,12 @@ export class ResultsComponent implements OnInit, OnDestroy {
   curseSub: Subscription
   curse
 
+  cyborgSub: Subscription
+  cyborg
+
+  morphSub: Subscription
+  morph
+
   constructor(private gService: GeneratorService) {}
 
 
@@ -68,8 +74,10 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.prismaticSub = this.gService.prismatic.subscribe((prismatic) => {this.prismatic = prismatic})
     this.satechSub = this.gService.satech.subscribe((satech) => {this.satech = satech})
     this.carouseSub = this.gService.carouse.subscribe((carouse) => {this.carouse = carouse})
-    this.curseSub = this.gService.curse.subscribe((curse) => {this.curse =curse})
-    this.gateSub = this.gService.gate.subscribe((gate) =>{this.gate = gate})
+    this.curseSub = this.gService.curse.subscribe((curse) => {this.curse = curse})
+    this.gateSub = this.gService.gate.subscribe((gate) => {this.gate = gate})
+    this.cyborgSub = this.gService.cyborg.subscribe((cyborg) => {this.cyborg = cyborg})
+    this.morphSub = this.gService.morph.subscribe((morph) => {this.morph = morph})
   }
 
 
@@ -89,6 +97,8 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.carouseSub.unsubscribe()
     this.curseSub.unsubscribe()
     this.gateSub.unsubscribe()
+    this.cyborgSub.unsubscribe()
+    this.morphSub.unsubscribe()
   }
 
 }

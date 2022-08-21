@@ -6,6 +6,7 @@ import { GrwComponent } from './grw/grw.component';
 import { MutationsComponent } from './mutations/mutations.component';
 import { PolymorphComponent } from './polymorph/polymorph.component';
 import { PrismaticComponent } from './prismatic/prismatic.component';
+import { RobotsComponent } from './robots/robots.component';
 import { TreasureComponent } from './treasure/treasure.component';
 import { WildSurgesComponent } from './wild-surges/wild-surges.component';
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'mutations', component:MutationsComponent},
   {path: 'polymorph', component:PolymorphComponent},
   {path: 'prismatic', component:PrismaticComponent},
+  {path: 'robots', component:RobotsComponent},
   {path: 'treasure', component:TreasureComponent},
   {path: 'wild-surges', component:WildSurgesComponent},
   {path: '' , redirectTo: "treasure", pathMatch:"full"}
