@@ -410,7 +410,7 @@ export class GeneratorService {
       "Painful: All damage dealt to you is maxed.",
       "Nearsighted: You see perfectly clear within 10' of you. Beyond that your vision is blurry and you can't perceive anything. Your suffer 50% miss chance on all missile attack rolls.",
       "Farsighted: Your vision is blurry within 10' of you. All your melee attacks suffer a 50% miss chance. Beyond 10' you see perfectly clear.",
-      "Remorseful: Every time you slay an enemy you feel sorrow for their lost. You can't do anything for 1d4 rounds as you mourn their death.",
+      "Remorseful: Every time you slay an enemy you feel sorrow for their loss. You can't do anything for 1d4 rounds as you mourn their death.",
       "Addiction: Your addicted to blueberry pie or whatever. If on any given day you don't indulge in your vice you enter a severe depression and refuse to do anything except find your blueberry pie.",
       "Beacon: Your draw unwanted attention. All random encounter rolls are doubled.",
       "Bleeder: Every time you take damage you continue to bleed for one additional round. Repeat the damage your were dealt the following round.",
